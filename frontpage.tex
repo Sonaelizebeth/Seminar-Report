@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   This is frontpage.tex file needed for the dmathesis.cls file.  You   %
+%  have to  put this file in the same directory with your thesis files.  %
+%            
+% 
+%                 No Copyright for this file                             % 
+%                 Save your time and enjoy it                            % 
+%                                                                        % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%           The title page           %%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+%\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\fancypagestyle{plain}{%    
+\fancyfoot[L]{\emph{Department of Computer Science and Engineering, SJCET Palai}} % except the center
+
+\fancyfoot[R]{\hfill\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\newpage
+
+\thispagestyle{empty}
+\begin{center}
+  {\Large \bf IMPROVING COMPUTER VISION-BASED PERCEPTION
+FOR COLLABORATIVE INDOOR NAVIGATION}
+\\
+
+\vspace*{1 cm}
+{\large \bf SEMINAR REPORT}
+
+
+   \vspace*{0.1cm}
+   {\large Submitted by\\\vspace*{0.8cm} { \bf SONA ELIZEBETH SHAJI \\SJC19CS113}\\
+ }\\
+  {\large to\\[-0.6mm] the APJ Abdul Kalam Technological University\\[-0.6mm] in partial fulfillment of the requirements for the award of the degree\\[-0.6mm] of\\[-0.6mm] Bachelor of Technology\\[-0.6mm] in\\[-0.6mm] {\bf \emph{Computer Science and Engineering}}
+  \vspace*{2cm}
+  
+  % Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics{SJCET_logo.jpg}
+   \end{center}
+
+  {\normalsize {\bf { DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}}\\
+          [1mm] {\normalsize {\bf ST. JOSEPH’S COLLEGE OF ENGINEERING AND TECHNOLOGY, PALAI}\\
+           [0.2mm] {\large{\bf December :: 2022}}}}
+
+\end{center}
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% The dedication page, of you have one  %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\begin{center}
+\normalsize{\bf{ST. JOSEPH’S COLLEGE OF ENGINEERING AND TECHNOLOGY, PALAI}}\\[0.5cm]
+\normalsize
+ {\bf{ DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}}\\[1.0cm]% Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics{SJCET_logo.jpg}
+   \end{center}
+{\large \bf{CERTIFICATE}}\\[1.5cm]
+\end{center}
+\normalsize 
+This is to certify that the seminar report entitled {\bf $ "$IMPROVING COMPUTER VISION-BASED PERCEPTION FOR COLLABORATIVE INDOOR NAVIGATION $"$} submitted by { \bf SONA ELIZEBETH SHAJI (SJC19CS113)} to the APJ Abdul
+Kalam Technological University in partial fulfillment of the requirements for the award of
+the degree of Bachelor of Technology in Computer Science and Engineering is a bonafide
+report of the seminar presented by her under my guidance and supervision. .\vspace{1.3 cm}\\
+{\bf Seminar Guide}\hspace{8.4 cm}{\bf Seminar Coordinator}\\
+Dr. Sruthy S\hspace{9.0 cm}Dr. Joby P P\\ Associate Professor\hspace{7.7cm} Professor \& Head\\Department of CSE\hspace{7.7 cm} Department of CSE\
+\vspace{1.3 cm}\\
+.\hspace{11.00 cm}{ \bf Head of the Department}
+\newline
+.\hspace{11.0 cm} Dr. Joby P P
+\newline
+Place : Choondacherry  \hspace{7.15 cm} Professor \& Head
+\newline
+Date\hspace{0.25 cm}: 16-12-2022\hspace{7.85 cm} Department of CSE
+                
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\begin{center}
+  \vspace*{1cm}
+  \textbf{\large Abstract}
+\end{center}
+Collaborative navigation is the most promising technique for infrastructure-free indoor navigation for a group of pedestrians, such as rescue personnel. Infrastructure-free navigation means using a system that is able to localize itself independent of any equipment pre-installed to the building using various sensors monitoring the motion of the user. The most feasible navigation sensors are inertial sensors and a camera providing motion information when a computer vision method called visual odometry is used. Collaborative indoor navigation sets challenges to the use of computer vision; navigation environment is often poor of tracked features, other pedestrians in front of the camera interfere with motion detection, and the size and cost constraints prevent the use
+of best quality cameras resulting in measurement errors. The authors have developed an improved computer vision based collaborative navigation method addressing these challenges using a depth (RGB-D) camera, a deep learning based
+detector to avoid using features found from other pedestrians and for controlling the inconsistency of object depth detection, which would degrade the accuracy of the visual odometry solution if not controlled. The authors analysis shows that their method improves the visual odometry solution using a low-cost RGB-D camera. Finally, they show the result for computing the solution using visual odometry and inertial sensor fusion for the individual and UWB ranging for collaborative navigation.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%    tableofcontents, listoffigures and listoftables       %%%%%%%%%
+%%%%%%%%        Command if you do not have  them                  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature
+\nomenclature{GNSS}{Global Navigation Satellite Systems}
+\nomenclature{MEMS}{Micro-Electro-Mechanical sensors}
+\nomenclature{UWB}{Ultra-Wide Band}
+\nomenclature{RTT}{Round Trip timing}
+\nomenclature{ZUPT}{Zero velocity update}
+\nomenclature{IMU}{Inertial measurement unit}
+\nomenclature{SLAM}{Simultaneous Localization and Mapping}
+\nomenclature{SURF}{Speeded Up Robust Features}
+\nomenclature{CNN}{Convolutional Neural Network}
+\nomenclature{RANSAC}{RANdom SAmple Consensus}
+\nomenclature{SIFT}{Scale Invariant Feature Transform}
+\nomenclature{YOLO}{You Only Look Once }
+\nomenclature{RMSE}{Root mean square error}
+\nomenclature{SGDM}{Stochastic Gradient Descent with Momentum }
+\nomenclature{VO}{Visual odometry}
+\nomenclature{PnP}{Perspective-n-Point algorithm}
+\nomenclature{CN}{Collaborative Navigation}
+\nomenclature{EKF}{Extended Kalman filter}
+\nomenclature{CSS}{Chirp Spread Spectrum}
+\nomenclature{RTK}{Real-time Kinematic}
+\nomenclature{RPE}{Relative Pose Error}
+\nomenclature{DSRM}{Distance Root Mean Square}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%   END OF FRONT PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+

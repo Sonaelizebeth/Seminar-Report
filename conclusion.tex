@@ -1,0 +1,35 @@
+\chapter{Conclusion}
+\setcounter{equation}{1}   
+
+This paper discussed the development of an improved visual
+odometry solution, where a small and low-cost RGB-D camera
+was used for solving the scale issue, a problem arising when
+using a monocular camera. Because the low-cost camera
+had inconsistencies in the depth detection, a methods for
+making the detection more robust were used. The goal of
+the research was to obtain an accurate infrastructure-free
+navigation solution for a group of people interacting indoors,
+therefore our method detected pedestrians from the images for
+avoiding to track their feature points. Accuracy of the resulting
+visual odometry solution was significantly improved over the
+conventional visual odometry solution for the real-world collaborative navigation dataset. However, the main issue in the
+indoor visual odometry, the lack of useful features, remained
+at harmful level despite this solution. This led to loosing
+the visual odometry solution completely at some challenging
+areas, mostly at staircases where the camera was able to
+perceive only featureless white wall. Therefore, the fusion of
+the visual odometry into the collaborative navigation setup
+improved the positioning accuracy only incrementally.\\
+Collaborative navigation remains a powerful tool for teams
+when entering environments which are unknown and cannot
+be prepared for navigation in advance. Therefore, the future
+research includes development of deep learning methods for
+improving the feature detection in the challenging and feature
+poor indoor environment. Then, after solving the remaining
+vision based issues authors will continue in fusing tightly the
+camera and inertial sensors for the collaborative setting. The
+tight fusion of the camera and inertial sensors means that the
+feature detection and motion computation phase incorporate
+information from the inertial measurement processing and vice
+versa, resulting in improved complementary error detection
+and mitigation.
